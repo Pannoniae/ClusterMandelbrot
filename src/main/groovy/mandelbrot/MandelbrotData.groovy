@@ -1,6 +1,6 @@
 package mandelbrot
 
-import dsl4cc.DSLrecords.EmitInterface
+import cluster_cli.records.EmitInterface
 
 class MandelbrotData implements  EmitInterface<MandelbrotData>, Serializable{
 
@@ -56,7 +56,7 @@ class MandelbrotData implements  EmitInterface<MandelbrotData>, Serializable{
   }
 
 // based on algorithm at https://en.wikipedia.org/wiki/Mandelbrot_set
- void calculateColour () {
+ void calculateColour (List p) {
     int width = colour.size()
 //    println "Calc : $ly"
     0.upto(width-1){ int w->

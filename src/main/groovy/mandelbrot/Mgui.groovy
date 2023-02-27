@@ -1,6 +1,6 @@
 package mandelbrot
 
-import dsl4cc.DSLrecords.CollectInterface
+import cluster_cli.records.CollectInterface
 import jcsp.awt.DisplayList
 import jcsp.awt.GraphicsCommand
 import java.awt.*

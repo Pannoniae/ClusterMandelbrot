@@ -6,8 +6,9 @@ import mandelbrot.MandelbrotData
 
 int maxIterations, widthPoints
 long startTime, endTime
-maxIterations = 4096
-widthPoints = 1024
+widthPoints = 512
+maxIterations = 2048
+
 
 startTime = System.currentTimeMillis()
 MandelbrotData mandelbrotBase = new MandelbrotData([widthPoints, maxIterations])

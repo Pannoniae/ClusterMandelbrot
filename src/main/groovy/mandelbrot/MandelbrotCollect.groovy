@@ -1,6 +1,6 @@
 package mandelbrot
 
-import dsl4cc.DSLrecords.CollectInterface
+import cluster_cli.records.CollectInterface
 
 class MandelbrotCollect implements CollectInterface <MandelbrotData> {
 
