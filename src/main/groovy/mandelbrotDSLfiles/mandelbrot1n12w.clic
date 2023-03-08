@@ -1,4 +1,4 @@
-host -ip 127.0.0.1
+version 1.0.1
 emit -n 1 -w 1 -p int,int!512,2048
 work -n 1 -w 12 -m calculateColour
 collect -n 1 -w 1

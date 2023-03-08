@@ -10,6 +10,7 @@ class RunLocalHost4_1024 {
     Class  emitClass = MandelbrotData
     Class collectClass = MandelbrotCollect
     new HostRun(structureFile, emitClass, collectClass, "Local").invoke()
+
   }
 
 }
