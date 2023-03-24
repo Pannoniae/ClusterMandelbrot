@@ -31,7 +31,7 @@ repositories {
     }
 //    maven { // to download the cli_cluster_library library
 //        name = "GitHubPackages"
-//        url = "https://maven.pkg.github.com/JonKerridge/cluster_cli_library"
+//        url = "https://maven.pkg.github.com/JonKerridge/cluster_cli"
 //        credentials {
 //            username = props.getProperty("gpr.user")
 //            password = props.getProperty("gpr.key")
@@ -43,7 +43,7 @@ dependencies {
     implementation 'org.codehaus.groovy:groovy-all:3.0.16'
     implementation 'cspforjava:jcsp:1.1.9'
     implementation 'jonkerridge:groovy_jcsp:1.1.10'
-    implementation 'jonkerridge:cluster_cli:1.0.3'
+    implementation 'jonkerridge:cluster_cli:1.0.4'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
