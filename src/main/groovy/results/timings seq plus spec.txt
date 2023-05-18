@@ -1,0 +1,94 @@
+D:\clihost\seqVersions>java -jar seq512.jar
+MD construct: width: 512, height: 292, delta: 0.0068359375, escape: 2048
+Points = 149504, whites = 117234, blacks = 32270, iterations = 66932593
+Elapsed time = 13265 milliseconds
+
+D:\clihost\seqVersions>java -jar seq512.jar
+MD construct: width: 512, height: 292, delta: 0.0068359375, escape: 2048
+Points = 149504, whites = 117234, blacks = 32270, iterations = 66932593
+Elapsed time = 13494 milliseconds
+
+D:\clihost\seqVersions>java -jar seq512.jar
+MD construct: width: 512, height: 292, delta: 0.0068359375, escape: 2048
+Points = 149504, whites = 117234, blacks = 32270, iterations = 66932593
+Elapsed time = 13102 milliseconds
+
+D:\clihost\seqVersions>java -jar seq512.jar
+MD construct: width: 512, height: 292, delta: 0.0068359375, escape: 2048
+Points = 149504, whites = 117234, blacks = 32270, iterations = 66932593
+Elapsed time = 13678 milliseconds
+
+D:\clihost\seqVersions>java -jar seq512.jar
+MD construct: width: 512, height: 292, delta: 0.0068359375, escape: 2048
+Points = 149504, whites = 117234, blacks = 32270, iterations = 66932593
+Elapsed time = 13693 milliseconds
+
+
+
+D:\clihost\seqVersions>java -jar seq1024.jar
+MD construct: width: 1024, height: 585, delta: 0.00341796875, escape: 2048
+Points = 599040, whites = 469958, blacks = 129082, iterations = 267788836
+Elapsed time = 54531 milliseconds
+
+D:\clihost\seqVersions>java -jar seq1024.jar
+MD construct: width: 1024, height: 585, delta: 0.00341796875, escape: 2048
+Points = 599040, whites = 469958, blacks = 129082, iterations = 267788836
+Elapsed time = 52771 milliseconds
+
+D:\clihost\seqVersions>java -jar seq1024.jar
+MD construct: width: 1024, height: 585, delta: 0.00341796875, escape: 2048
+Points = 599040, whites = 469958, blacks = 129082, iterations = 267788836
+Elapsed time = 51141 milliseconds
+
+D:\clihost\seqVersions>java -jar seq1024.jar
+MD construct: width: 1024, height: 585, delta: 0.00341796875, escape: 2048
+Points = 599040, whites = 469958, blacks = 129082, iterations = 267788836
+Elapsed time = 50971 milliseconds
+
+D:\clihost\seqVersions>java -jar seq1024.jar
+MD construct: width: 1024, height: 585, delta: 0.00341796875, escape: 2048
+Points = 599040, whites = 469958, blacks = 129082, iterations = 267788836
+Elapsed time = 50076 milliseconds
+
+
+
+D:\clihost\seqVersions>java -jar seq2048.jar
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 199970 milliseconds
+
+D:\clihost\seqVersions>java -jar seq2048.jar
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 199248 milliseconds
+
+D:\clihost\seqVersions>java -jar seq2048.jar
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 192785 milliseconds
+
+D:\clihost\seqVersions>java -jar seq2048.jar
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 218005 milliseconds
+
+D:\clihost\seqVersions>
+D:\clihost\seqVersions>java -jar seq2048.jar
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 210244 milliseconds
+
+
+Device name	ME0D002-211850
+Full device name	ME0D002-211850.napier-mail.napier.ac.uk
+Processor	Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz   2.90 GHz
+Installed RAM	32.0 GB (31.8 GB usable)
+Device ID	5E05647F-EE56-4DA1-AFDC-1BEF6CF1AA89
+Product ID	00329-00000-00003-AA896
+System type	64-bit operating system, x64-based processor
+Pen and touch	No pen or touch input is available for this display
+
+
+
+
+
