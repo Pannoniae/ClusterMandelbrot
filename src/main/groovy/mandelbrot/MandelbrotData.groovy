@@ -55,7 +55,7 @@ class MandelbrotData implements  EmitInterface<MandelbrotData>, Serializable{
     return md
   }
 
-// based on algorithm at https://en.wikipedia.org/wiki/Mandelbrot_set
+// based on algorithm at
  void calculateColour (List p) {
     int width = colour.size()
 //    println "Calc : $ly"

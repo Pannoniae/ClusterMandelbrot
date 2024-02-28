@@ -5,7 +5,7 @@ import jcsp.userIO.Ask
 import mandelbrot.MandelbrotCollect
 import mandelbrot.MandelbrotData
 
-class NetHost {
+class   NetHost{
   static void main(String[] args) {
     String structureFile
     if (args.size() == 0)
