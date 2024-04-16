@@ -1,0 +1,22 @@
+[40000251@login1[enucc] scripts]$ ./runSeq2048.sh
+Sequential Run Number : 1
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 208525 milliseconds
+Sequential Run Number : 2
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 210693 milliseconds
+Sequential Run Number : 3
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 245109 milliseconds
+Sequential Run Number : 4
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 207774 milliseconds
+Sequential Run Number : 5
+MD construct: width: 2048, height: 1170, delta: 0.001708984375, escape: 2048
+Points = 2396160, whites = 1879817, blacks = 516343, iterations = 1071221513
+Elapsed time = 211258 milliseconds
+[40000251@login1[enucc] scripts]$

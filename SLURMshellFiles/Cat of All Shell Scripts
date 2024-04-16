@@ -1,0 +1,132 @@
+[40000251@login1[enucc] scripts]$ for file in *.sh; do echo "$file"; cat "$file"; echo "-------------------"; done
+
+runCluster.sh
+#!/bin/bash
+#SBATCH --ntasks=4
+#SBATCH --nodes=4
+#SBATCH --nodelist node[02-05]
+#SBATCH --cpus-per-task=28
+for n in $(seq 1 5)
+do
+        printf "Run Number : %s\n" $n
+
+        srun -N 1 -n 1 --cpus-per-task=28 --exact --nodelist node[02] ./runHost.sh $1 &
+        srun -N 3 -n 3 --cpus-per-task=28 --exact --nodelist node[03-05] ./runNode.sh &
+        wait
+done
+-------------------
+runCluster4.sh
+#!/bin/bash
+#SBATCH --ntasks=4
+#SBATCH --nodes=4
+#SBATCH --nodelist node[02-05]
+#SBATCH --cpus-per-task=8
+for n in $(seq 1 5)
+do
+        printf "Run Number : %s\n" $n
+
+        srun -N 1 -n 1 --cpus-per-task=8 --exact --nodelist node[02] ./runHost.sh $1 &
+        srun -N 3 -n 3 --cpus-per-task=8 --exact --nodelist node[03-05] ./runNode.sh &
+        wait
+done
+-------------------
+runCluster5.sh
+#!/bin/bash
+#SBATCH --ntasks=5
+#SBATCH --nodes=5
+#SBATCH --nodelist node[02-06]
+#SBATCH --cpus-per-task=8
+for n in $(seq 1 5)
+do
+        printf "Run Number : %s\n" $n
+
+        srun -N 1 -n 1 --cpus-per-task=8 --exact --nodelist node[02] ./runHost.sh $1 &
+        srun -N 4 -n 4 --cpus-per-task=8 --exact --nodelist node[03-06] ./runNode.sh &
+        wait
+done
+-------------------
+runCluster6.sh
+#!/bin/bash
+#SBATCH --ntasks=6
+#SBATCH --nodes=6
+#SBATCH --nodelist node[02-07]
+#SBATCH --cpus-per-task=8
+for n in $(seq 1 5)
+do
+        printf "Run Number : %s\n" $n
+
+        srun -N 1 -n 1 --cpus-per-task=8 --exact --nodelist node[02] ./runHost.sh $1 &
+        srun -N 5 -n 5 --cpus-per-task=8 --exact --nodelist node[03-07] ./runNode.sh &
+        wait
+done
+-------------------
+runCluster7.sh
+#!/bin/bash
+#SBATCH --ntasks=7
+#SBATCH --nodes=7
+#SBATCH --nodelist node[02-08]
+#SBATCH --cpus-per-task=8
+for n in $(seq 1 5)
+do
+        printf "Run Number : %s\n" $n
+
+        srun -N 1 -n 1 --cpus-per-task=8 --exact --nodelist node[02] ./runHost.sh $1 &
+        srun -N 6 -n 6 --cpus-per-task=8 --exact --nodelist node[03-08] ./runNode.sh &
+        wait
+done
+-------------------
+runHPCmulti.sh
+#!/bin/bash
+for n in $(seq 1 5)
+do
+        printf "Run Number : %s\n" $n
+
+        srun -N 1 -n 1 --cpus-per-task=16 --exact --nodelist node[02] ./runHost.sh $1 &
+        srun -N 4 -n 4 --cpus-per-task=16 --exact --nodelist node[03-06] ./runNode.sh &
+        wait
+done
+-------------------
+runHost.sh
+#!/bin/bash
+ip=$(hostname -i)
+printf  "Host ip is %s: starting host node\n" $ip
+
+java -jar ../mandelbrot/NetHost.jar ../HPCmulti/$1
+
+-------------------
+runMany.sh
+#!/bin/bash
+#SBATCH -D /users/40000251/scripts
+#SBATCH -o job-%j.output
+#SBATCH --mail-user="40000251@napier.ac.uk"
+#SBATCH --mail-type ALL
+#SBATCH --ntasks=5
+#SBATCH --nodes=5
+#SBATCH --nodelist node[02-06]
+#SBATCH --cpus-per-task=16
+#SBATCH --time=45
+##./runHPCmulti.sh hpc2n4w2048
+##./runHPCmulti.sh hpc2n6w2048
+##./runHPCmulti.sh hpc2n8w2048
+##./runHPCmulti.sh hpc2n10w2048
+./runHPCmulti.sh hpc2n12w2048
+-------------------
+runNode.sh
+#!/bin/bash
+ip=$(hostname -i)
+printf "Node ip is %s: running a node process\n" $ip
+
+java -jar ../mandelbrot/NetNode.jar 10.10.0.102
+
+
+-------------------
+runSeq2048.sh
+#!/bin/bash
+#SBATCH --ntasks=1
+#SBATCH --nodes=1
+for n in $(seq 1 5)
+do
+        printf "Sequential Run Number : %s\n" $n
+        java -jar ../mandelbrot/Seq2048.jar
+done
+-------------------
