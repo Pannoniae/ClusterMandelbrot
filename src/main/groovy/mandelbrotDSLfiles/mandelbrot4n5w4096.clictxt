@@ -10,7 +10,7 @@ type= version, host= null, version = 1.0.9,
 type= emit, host= null, version = 1.0.9,   
 	nodes= 1, workers= 1, 
 	fixed IPs= [] 
-	emitParams= [[int, int], [4096, 4096]]
+	emitParams= [[int, int], [4096, 2048]]
 	work method= null, work params=[], 
 	collect params= [],
 	finalise params= [],
