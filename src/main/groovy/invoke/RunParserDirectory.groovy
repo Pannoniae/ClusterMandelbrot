@@ -16,5 +16,4 @@ class RunParserDirectory {
             assert parser.parse(): "Parsing failed"
         }
     }
-
 }

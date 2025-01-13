@@ -1,0 +1,1 @@
+sbatch --job-name="$1" --time=45 --mail-user="40536446@napier.ac.uk" --mail-type=ALL --output="$1".out -D /users/40536446/scripts ./multirun.sh "$1"
