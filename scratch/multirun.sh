@@ -18,7 +18,10 @@ else
     exit 1
 fi
 
-# Calculate actual number of nodes (specified + 2)
+# total nodes = n + 3
+# start node = 2
+# end node = 2 + total nodes
+# num_nodes = n + 2 because host is not included
 num_nodes=$((specified_nodes + 2))
 end_node=$((num_nodes + 2))
 cpus_per_task=$((workers_per_node + 2))
@@ -30,7 +33,7 @@ do
     printf "%d\n" $end_node
     printf "%d\n" $cpus_per_task
     srun -N 1 -n 1 --cpus-per-task=$cpus_per_task --exact --nodelist node[02] ./runHost.sh "$1" &
-    srun -N "$specified_nodes" -n "$specified_nodes" --cpus-per-task=$cpus_per_task --exact --nodelist node[03-"$(printf "%02d" $end_node)"] ./runNode.sh &
+    srun -N $num_nodes -n $num_nodes --cpus-per-task=$cpus_per_task --exact --nodelist node[03-"$(printf "%02d" $end_node)"] ./runNode.sh &
 
     wait
 done
