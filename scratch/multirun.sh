@@ -26,6 +26,8 @@ num_nodes=$((specified_nodes + 2))
 end_node=$((num_nodes + 2))
 cpus_per_task=$((workers_per_node + 2))
 
+module load apps/java/21.0.2/noarch
+
 for n in $(seq 1 5)
 do
     printf "Run Number : %s\n" "$n"
