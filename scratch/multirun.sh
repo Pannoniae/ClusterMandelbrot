@@ -8,7 +8,7 @@ if [ $# -ne 1 ]; then
 fi
 
 # Extract parameters using regex
-if [[ $1 =~ ^([0-9]+)n([0-9]+)w([0-9]+)$ ]]; then
+if [[ $1 =~ ^([0-9]+)n([0-9]+)w([0-9]+)(_[0-9]+)?$ ]]; then
     specified_nodes=${BASH_REMATCH[1]}
     workers_per_node=${BASH_REMATCH[2]}
     size=${BASH_REMATCH[3]}
@@ -25,6 +25,9 @@ fi
 num_nodes=$((specified_nodes + 2))
 end_node=$((num_nodes + 2))
 cpus_per_task=$((workers_per_node + 2))
+
+# cap it at 32 (the max. number of CPUs on the system)
+cpus_per_task=$((cpus_per_task > 32 ? 32 : cpus_per_task))
 
 module load apps/java/21.0.2/noarch
 
